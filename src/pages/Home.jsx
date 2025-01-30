@@ -28,7 +28,7 @@ const bestSale = products.filter((item) => item.category === "tv");
       />
       <Section title="Best Sales" 
       bgColor="#f6f9fc"
-       productItems={bestSale} />
+       productItems={salebest} />
     </Fragment>
   );
 };
