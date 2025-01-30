@@ -1,0 +1,130 @@
+/* Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f8f9fc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Navbar Styles */
+nav {
+  background-color: #1e3a8a; /* Dark Blue */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: ;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 12px 0;
+  margin-bottom: ;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 12px 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white; /* White Text for Contrast */
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #2563eb; /* Light Blue */
+  color: white;
+}
+
+/* Move Logo to the Left */
+nav li:first-child {
+  margin-right: auto;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  height: 100vh;
+  width: 250px;
+  background: rgba(30, 58, 138, 0.9); /* Dark Blue with Transparency */
+  backdrop-filter: blur(15px);
+  box-shadow: -10px 0 15px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 20px;
+  transition: right 0.4s ease-in-out;
+}
+
+.sidebar.visible {
+  right: 0;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 165, 0, 0.8); /* Orange Highlight */
+}
+
+/* Menu Button */
+.menu-button {
+  display: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.menu-button:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}

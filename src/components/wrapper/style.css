@@ -1,0 +1,111 @@
+:root {
+  --primary-color: #0071C5;  /* Blue */
+  --secondary-color: #F5F5F5; /* Light Gray */
+  --accent-color: #FF3B30;  /* Red */
+  --white: #FFFFFF;
+  --text-color: #222222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none; /* Remove the default underline from links */
+  color: inherit; /* Inherit color from parent */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+/* Wrapper */
+.wrapper {
+  background-color: var(--white);
+  padding: 50px 30px;
+  text-decoration: none;
+}
+
+.wrapper h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color); /* Blue color for heading */
+  text-decoration: none;
+}
+
+/* Feature Item */
+.feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature .icon {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white); /* White background for icons */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.feature img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.feature h3 {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 30px 15px;
+  }
+
+  .feature {
+    margin-bottom: 30px;
+  }
+
+  .feature h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper h2 {
+    font-size: 1.5rem;
+  }
+
+  .feature .icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .feature h3 {
+    font-size: 0.9rem;
+  }
+}

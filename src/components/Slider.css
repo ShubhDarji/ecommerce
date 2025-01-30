@@ -1,0 +1,58 @@
+.homeSlide {
+    height:100% ;
+    width: 100%;
+object-fit: cover;
+background-color: black;
+    /* Added top margin */
+     /* Light background for better contrast */
+  }
+  Slider Slidercard cover{
+    width: fit-content;
+    height: fit-content;
+    object-fit: cover;
+  }
+  
+
+  
+
+  
+  
+  /* Responsive Height */
+  @media (max-width: 1024px) {
+    .slick-slider {
+      height: 60vw;
+      object-fit: cover;  /* Adjusted for tablets */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .slick-slider {
+      height: 300px;  
+      object-fit: cover;
+      /* Adjusted for mobile screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slick-slider {
+        object-fit: cover;
+            height: 300px; 
+       /* Smaller height for small devices */
+    
+  }
+}
+  
+  /* Custom Dots for better visibility */
+  .slick-dots {
+    bottom: 15px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: #1e3a8a; /* Theme's Dark Blue */
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #ffa500; /* Orange highlight */
+  }
+  
