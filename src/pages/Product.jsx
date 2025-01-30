@@ -8,7 +8,7 @@ import ProductDetails from "../components/ProductDetails/ProductDetails";
 import ProductReviews from "../components/ProductReviews/ProductReviews";
 import useWindowScrollToTop from "../hooks/useWindowScrollToTop";
 import FilterSelect from "../components/FilterSelect";
-
+import "./Product.css"
 const Product = () => {
   const { id } = useParams();
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -27,7 +27,7 @@ const Product = () => {
       setRelatedProducts(
         products.filter(
           (item) =>
-            item.category === currentProduct.category && item.id !== currentProduct.id
+            <item className="companyname"></item> === currentProduct.companyName && item.id !== currentProduct.id
         )
       );
     } else {
@@ -48,7 +48,7 @@ const Product = () => {
   return (
     <Fragment>
       <Banner title={selectedProduct?.productName} />
-      <FilterSelect setFilterList={setFilterList} />
+     
       <ProductDetails selectedProduct={selectedProduct} />
       <ProductReviews selectedProduct={selectedProduct} />
       

@@ -32,7 +32,7 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/shop/:id" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/brand/:brandName" component={ShopByBrand} />
+          <Route path="/brand/:companyname" component={ShopByBrand} />
         </Routes>
         <Footer />
       </Router>
