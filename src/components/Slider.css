@@ -1,58 +1,86 @@
+/* Slider Container */
 .homeSlide {
-    height:100% ;
-    width: 100%;
-object-fit: cover;
-background-color: black;
-    /* Added top margin */
-     /* Light background for better contrast */
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  background-color: black; /* Background color for contrast */
+  overflow: hidden; /* Hide anything outside the container */
+  display: flex; /* Flexbox for centering content */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+
+/* Slider Image as Background */
+.slick-slide {
+  position: relative;
+  height: 100%; /* Ensure that the slide fills the container */
+  display: flex;
+  justify-content: center;
+}
+
+.slick-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area */
+  object-position: center; /* Centers the image */
+}
+
+/* Slider Card Style */
+.slick-slide .SlideCard {
+  position: relative;
+  z-index: 2; /* Makes sure the card content stays above the background image */
+}
+
+/* Navigation Arrows */
+.slick-prev, .slick-next {
+  z-index: 10; /* Keeps navigation arrows above slider */
+}
+
+/* Dots Navigation */
+.slick-dots {
+  bottom: 15px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #1e3a8a; /* Dark Blue for inactive dots */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ffa500; /* Orange highlight for active dot */
+}
+
+/* Responsive Height Adjustments */
+@media (max-width: 1024px) {
+  .homeSlide {
+    height: 60vw; /* Adjusted height for tablets */
   }
-  Slider Slidercard cover{
-    width: fit-content;
-    height: fit-content;
+
+  .slick-slide img {
     object-fit: cover;
-  }
-  
-
-  
-
-  
-  
-  /* Responsive Height */
-  @media (max-width: 1024px) {
-    .slick-slider {
-      height: 60vw;
-      object-fit: cover;  /* Adjusted for tablets */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .slick-slider {
-      height: 300px;  
-      object-fit: cover;
-      /* Adjusted for mobile screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .slick-slider {
-        object-fit: cover;
-            height: 300px; 
-       /* Smaller height for small devices */
-    
+    object-position: center;
   }
 }
-  
-  /* Custom Dots for better visibility */
-  .slick-dots {
-    bottom: 15px;
+
+@media (max-width: 768px) {
+  .homeSlide {
+    height: 50vh; /* Adjusted height for mobile screens */
   }
-  
-  .slick-dots li button:before {
-    font-size: 12px;
-    color: #1e3a8a; /* Theme's Dark Blue */
+
+  .slick-slide img {
+    object-fit: cover;
+    object-position: center;
   }
-  
-  .slick-dots li.slick-active button:before {
-    color: #ffa500; /* Orange highlight */
+}
+
+@media (max-width: 480px) {
+  .homeSlide {
+    height: 40vh; /* Smaller height for very small devices */
   }
-  
+
+  .slick-slide img {
+    object-fit: cover;
+    object-position: center;
+  }
+}

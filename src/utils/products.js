@@ -32,8 +32,8 @@ import wireless03 from "../Images/wireless-03.png";
 import wireless04 from "../Images/wireless-04.png"; */
 
 import refrigeratorImage from "../Images/Flagship-ACs-LP-900x563_786dc4af-4ce2-4189-8be9-2c5eeb5dc720_1000x.png";
-import airConditionerImage from "../Images/ac slider.webp";
-import washingMachineImage from "../Images/ac slider.webp";
+import airConditionerImage from "../Images/2075663.jpg";
+import washingMachineImage from "../Images/9532144.jpg";
 
 export const SliderData = [
   {
@@ -310,6 +310,31 @@ export const salebest=[
 
 
 export const products = [
+  {
+    id: "50",
+    category:"Fridge",
+    productName: "Samsung 678L Side-by-Side Refrigerator",
+    companyName: "Bluestar",
+    price: 89990, 
+    shortDesc: "Spacious and feature-rich refrigerator for large families.",
+    description: "This Samsung Side-by-Side Refrigerator boasts a generous 678L capacity, providing ample space for all your groceries. It features advanced cooling technology, an ice and water dispenser, and a sleek design that complements modern kitchens.",
+    reviews: [
+      {
+        rating: 4.7,
+        text: "Excellent refrigerator! Keeps everything fresh and organized. Highly recommend it.",
+      },
+      {
+        rating: 5,
+        text: "Love the ice and water dispenser. Very convenient and the refrigerator looks stunning.",
+      },
+      {
+        rating: 4.5,
+        text: "Good value for the price. Plenty of storage space and the cooling is efficient.",
+      },
+    ],
+    avgRating: 4.7,
+    imgUrl: refrigeratorImage01, // Replace with actual image import
+  },
   // Refrigerators
   {
     id: "01",

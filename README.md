@@ -45,3 +45,8 @@ $ npm start
 ```
 👨‍💻 Happy coding!
 ---
+.search_container{
+
+  display: flex;
+  justify-content:space-around ;
+}

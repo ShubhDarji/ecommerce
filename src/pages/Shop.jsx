@@ -6,6 +6,7 @@ import Banner from "../components/Banner/Banner"; // Banner component
 import useWindowScrollToTop from "../hooks/useWindowScrollToTop"; // Custom hook
 import FilterSelect from "../components/FilterSelect";
 import SearchBar from "../components/SeachBar/SearchBar";
+import "../index.css"
 
 const Shop = () => {
   const [filterList, setFilterList] = useState(products); // Initial product list
@@ -28,9 +29,10 @@ const Shop = () => {
 
   return (
     <Fragment>
-<SearchBar setFilterList={setFilterList} products={products} />
+      <div className="search_container">
+<SearchBar setFilterList={setFilterList} products={products }  />
 <FilterSelect setFilterList={setFilterList} products={products} />
-
+</div>
       
       <section className="filter-bar py-4">
         <Container>
@@ -57,6 +59,7 @@ const Shop = () => {
             </Col>
           </Row>
         </Container>
+        
       </section>
     </Fragment>
   );

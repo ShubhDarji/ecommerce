@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Container } from "react-bootstrap";
 import SlideCard from "./SliderCard/SlideCard";
 import { SliderData } from "../utils/products";
-import './Slider.css'
+
 const SliderHome = () => {
   const settings = {
     dots: true,  // Enables navigation dots

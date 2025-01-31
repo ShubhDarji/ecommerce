@@ -9,7 +9,7 @@ import './slidercard.css' // Import CSS for styling
 const SlideCard = ({ title, desc, cover, buttonText = "Learn More" }) => {
   return (
     <div className="slide-card">
-      <div className="slide-card-content" style={{ backgroundImage: `url(${cover})` }}>
+      <div className="slide-card-content" style={{ backgroundImage: `url(${cover})`, width:'(0%) ' }}>
         <Container>
           <Row>
             <Col md={{ span: 8, offset: 2 }} className="text-center">
