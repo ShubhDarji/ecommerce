@@ -10,15 +10,16 @@ const SlideCard = ({ title, desc, cover, buttonText = "Learn More" }) => {
   return (
     <div className="slide-card">
       <div className="slide-card-content" style={{ backgroundImage: `url(${cover})`, width:'(0%) ' }}>
+        <div className='other'>
         <Container>
           <Row>
             <Col md={{ span: 8, offset: 2 }} className="text-center">
-              <h1 className="slide-card-title">{title}</h1>
+              <h3 className="slide-card-title">{title}</h3>
               <p className="slide-card-desc">{desc}</p>
               <button className="slide-card-button">{buttonText}</button>
             </Col>
           </Row>
-        </Container>
+        </Container></div>
       </div>
     </div>
   );

@@ -3,19 +3,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-  background-color: #f8f9fc;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  color: rgb(255, 255, 255);
 
 }
+
+
 
 /* Navbar Styles */
 nav {
-  background-color: #1e3a8a; /* Dark Blue */
+  background-color: #ffffff; /* Dark Blue */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
   width: 100%;
@@ -23,7 +19,8 @@ nav {
   left: 0;
   z-index: 1000;
   padding: 12px 0;
-  margin-bottom: ;
+  color: rgb(255, 255, 255);
+
   z-index: 100;
 }
 
@@ -45,15 +42,15 @@ nav a {
   text-decoration: none;
   display: flex;
   align-items: center;
-  color: white; /* White Text for Contrast */
+  color: rgb(0, 0, 0); /* White Text for Contrast */
   font-weight: 500;
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
 }
 
 nav a:hover {
-  background-color: #2563eb; /* Light Blue */
-  color: white;
+  /* Light Blue */
+  color: rgb(0, 0, 0);
 }
 
 /* Move Logo to the Left */
@@ -61,7 +58,7 @@ nav li:first-child {
   margin-right: auto;
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 /* Sidebar Styles */
@@ -71,7 +68,7 @@ nav li:first-child {
   right: -250px;
   height: 100vh;
   width: 250px;
-  background: rgba(30, 58, 138, 0.9); /* Dark Blue with Transparency */
+   /* Dark Blue with Transparency */
   backdrop-filter: blur(15px);
   box-shadow: -10px 0 15px rgba(0, 0, 0, 0.1);
   list-style: none;
@@ -96,12 +93,16 @@ nav li:first-child {
   padding: 15px 30px;
   font-size: 18px;
   font-weight: 500;
-  color: white;
+  color: rgb(0, 0, 0);
+  
   transition: background 0.3s ease;
 }
 
 .sidebar a:hover {
-  background: rgba(255, 165, 0, 0.8); /* Orange Highlight */
+  transition: border .5 ease;
+  color: white;
+  
+  background: rgba(0, 0, 0, 0.632); /* Orange Highlight */
 }
 
 /* Menu Button */

@@ -31,6 +31,7 @@
     font-weight:20 ;
     font-size:.7rem;
     cursor: pointer;
+    color: black;
 }
 
 .product .rate i {
@@ -48,6 +49,7 @@
 
 .price h4 {
     margin: 20px 0 10px;
+    color: black;
 }
 
 .price button {

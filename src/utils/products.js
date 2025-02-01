@@ -1,39 +1,39 @@
-import refrigeratorImage01 from "../Images/double-sofa-01.png";
-import refrigeratorImage02 from "../Images/double-sofa-02.png";
-import refrigeratorImage03 from "../Images/double-sofa-03.png";
+import refrigeratorImage01 from "../Images/Adobe Express - file (1).png";
+import refrigeratorImage02 from "../Images/Adobe Express - file (3).png";
+import refrigeratorImage03 from "../Images/31jiBNco+0L._SY445_SX342_.png";
 
-import acImage01 from "../Images/single-sofa-01.jpg";
-import acImage02 from "../Images/single-sofa-02.jpg";
-import acImage03 from "../Images/single-sofa-03.jpg";
-import acImage04 from "../Images/single-sofa-04.png";
+import acImage01 from "../Images/Adobe Express - file.png";
+import acImage02 from "../Images/OIP (3).png";
+import acImage03 from "../Images/31+y4WrV9wL._SX342_SY445_.jpg";
+import acImage04 from "../Images/51FQa0hdP0L._SX466_.jpg";
 
-import  washingMachineImage01 from "../Images/arm-chair-01.jpg";
-import  washingMachineImage02 from "../Images/arm-chair-02.jpg";
-import  washingMachineImage03 from "../Images/arm-chair-03.jpg";
-import  washingMachineImage04 from "../Images/arm-chair-01.jpg";
-import  washingMachineImage05 from "../Images/arm-chair-01.jpg";
+import  washingMachineImage01 from "../Images/31+y4WrV9wL._SX342_SY445_.jpg";
+import  washingMachineImage02 from "../Images/51FQa0hdP0L._SX466_.jpg";
+import  washingMachineImage03 from "../Images/61+a0T7rpFL._AC_UY218_.jpg";
+import  washingMachineImage04 from "../Images/71eL4y-4BOL._AC_UY218_.jpg";
+import  washingMachineImage05 from "../Images/712G-LLV+NL._AC_UY218_.jpg";
 
 import coolerImage01 from "../Images/phone-01.jpg";
-import coolerImage02 from "../Images/phone-02.jpg";
-import coolerImage03 from "../Images/phone-03.png";
-import coolerImage04 from "../Images/phone-04.jpg";
-import coolerImage05 from "../Images/phone-05.jpg";
-import coolerImage06 from "../Images/phone-06.jpg";
+import coolerImage02 from "../Images/51xSeqHG8NL._AC_UY218_.jpg";
+import coolerImage03 from "../Images/71PB4DerlcL._AC_UY218_.jpg";
+import coolerImage04 from "../Images/61uGikFOzHL._AC_UY218_.jpg";
+import coolerImage05 from "../Images/51S14uEdI3L._AC_UY218_.jpg";
+import coolerImage06 from "../Images/51z24EH5Q5L._AC_UY218_.jpg";
 
 
-import tvImage01 from "../Images/watch-01.jpg";
+import tvImage01 from "../Images/71zFdS29uFL._AC_UY218_.jpg";
 /* import watch02 from "../Images/watch-02.jpg"; */
 /* import watch03 from "../Images/watch-03.jpg";
 import watch04 from "../Images/watch-04.jpg"; */
 
-import microwaveImage01 from "../Images/wireless-01.png";
+import microwaveImage01 from "../Images/61tCpuACSIL._AC_UY218_.jpg";
 /* import wireless02 from "../Images/wireless-02.png";
 import wireless03 from "../Images/wireless-03.png";
 import wireless04 from "../Images/wireless-04.png"; */
 
-import refrigeratorImage from "../Images/Flagship-ACs-LP-900x563_786dc4af-4ce2-4189-8be9-2c5eeb5dc720_1000x.png";
-import airConditionerImage from "../Images/2075663.jpg";
-import washingMachineImage from "../Images/9532144.jpg";
+import refrigeratorImage from "../Images/Inverter-Split-ACs-LP-900x563_1000x.webp";
+import airConditionerImage from "../Images/TMF_PF_1440x344.jpg";
+import washingMachineImage from "../Images/1440x344_WT85B4200GD_TL.png";// need to replace
 
 export const SliderData = [
   {
@@ -310,9 +310,9 @@ export const salebest=[
 
 
 export const products = [
-  {
+  /* {
     id: "50",
-    category:"Fridge",
+    category:"ac",
     productName: "Samsung 678L Side-by-Side Refrigerator",
     companyName: "Bluestar",
     price: 89990, 
@@ -334,7 +334,7 @@ export const products = [
     ],
     avgRating: 4.7,
     imgUrl: refrigeratorImage01, // Replace with actual image import
-  },
+  }, */
   // Refrigerators
   {
     id: "01",
@@ -465,28 +465,29 @@ export const products = [
   {
     id: "06",
     category:'ac',
-    productName: "Daikin 1.0 Ton 3 Star Inverter Split AC",
-    companyName: "Daikin",
-    price: 36990,
-    shortDesc: "Reliable and efficient split AC with inverter technology.",
-    description: "Experience superior cooling performance with this Daikin Inverter Split AC. Its 1.0-ton capacity is ideal for small to medium-sized rooms, and the inverter compressor ensures consistent cooling and energy savings.",
+    productName: "Blue Star 1.0 Ton 3 Star Inverter Split AC",
+    companyName: "Blue Star",
+    price: 28990, 
+    shortDesc: "Affordable and efficient split AC with inverter technology.",
+    description: "Experience optimal cooling performance with this Blue Star Inverter Split AC. Its 1.0-ton capacity is perfect for small to medium-sized rooms, and the inverter compressor ensures consistent cooling and energy savings.",
     reviews: [
       {
-        rating: 4.8,
-        text: "Daikin is a trusted brand, and this AC lives up to its reputation. It's quiet, efficient, and cools well.",
+        rating: 4.5,
+        text: "Blue Star is a reliable brand, and this AC offers great value. It's reasonably quiet, efficient, and cools effectively.",
       },
       {
-        rating: 4.6,
-        text: "Easy to install and use. The cooling is quick and effective, even in hot weather.",
+        rating: 4.3,
+        text: "Installation was straightforward. The cooling is quick and effective, even during hot days.",
       },
       {
-        rating: 4.7,
-        text: "Good value for the price. The 3-star energy rating is decent, and the AC works flawlessly.",
+        rating: 4.4,
+        text: "Excellent value for the money. The 3-star energy rating is decent, and the AC functions well.",
       },
     ],
-    avgRating: 4.7,
-    imgUrl: acImage03, // Replace with actual image import
+    avgRating: 4.4,
+    imgUrl: acImage03, // Replace with actual image import 
   },
+
   {
     id: "07",
     category:'ac',
@@ -691,7 +692,7 @@ export const products = [
   },{
     id: "15",
     category:'cooler',
-    productName: "Symphony Diet 12T Personal Air Cooler",
+    productName: "Symphony Diet Personal Air Cooler",
     companyName: "Symphony",
     price: 6490,
     shortDesc: "Compact and portable air cooler for personal cooling.",
@@ -787,7 +788,7 @@ export const products = [
   },
   // Televisions
   {
-    id: "14",
+    id: "30",
     category:'tv',
     productName: "Samsung 138 cm (55 inches) Crystal 4K Series Ultra HD Smart LED TV",
     companyName: "Samsung",
@@ -813,7 +814,7 @@ export const products = [
   },
   // Microwave Oven (Added category)
   {
-    id: "15",
+    id: "25",
     category:'Oven',
     productName: "IFB 30 L Convection Microwave Oven",
     companyName: "IFB",
