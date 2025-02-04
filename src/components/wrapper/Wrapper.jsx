@@ -1,36 +1,32 @@
 import React from "react";
-import "./style.css";
-import { Col, Container, Row } from "react-bootstrap";
+import "./style.css"; // External CSS
 import { products } from "../../utils/products"; // Import products data
-import { Link } from "react-router-dom";const Wrapper = () => {
+import { Link } from "react-router-dom";
+
+const Wrapper = () => {
   // Extract unique brands from the products data
   const brands = [...new Set(products.map((product) => product.companyName))];
 
   return (
-    <section className="container wrapper background d-flex ">
-      <Container>
+    <section className="wrapper">
+      <div className="wrapper-container">
         <h2>Shop by Brands</h2>
-        <Row>
-          {/* Loop through the unique brands */}
+        <div className="brand-grid">
           {brands.map((brand, index) => {
-            // Filter products for the current brand to get the logo
             const brandProduct = products.find((product) => product.companyName === brand);
             return (
-              <Col className="feature" key={index}>
-                <Link to={`/brand/${brand.toLowerCase()}`}>
-                <div className="icon">
-                  {/* Replace with correct logo path */}
-                  <img 
-                    src={`/images/${brand.toLowerCase()}.png`} 
-                    alt={brand} 
-                  />
-                </div>
-                <h3>{brand}</h3></Link>
-              </Col>
+              <div className="brand-item" key={index}>
+                <Link to={`/brand/${brand.toLowerCase()}`} className="brand-link">
+                  <div className="brand-icon">
+                    <img src={`/images/${brand.toLowerCase()}.png`} alt={brand} />
+                  </div>
+                  <h3>{brand}</h3>
+                </Link>
+              </div>
             );
           })}
-        </Row>
-      </Container>
+        </div>
+      </div>
     </section>
   );
 };

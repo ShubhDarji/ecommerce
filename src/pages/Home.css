@@ -1,11 +1,4 @@
-:root {
-    --primary-color: #0071C5;  /* Bright Blue */
-    --secondary-color: #F5F5F5; /* Light Gray */
-    --accent-color: #FF3B30;  /* Red */
-    --white: #FFFFFF;
-    --text-color: #222222; /* Dark Gray */
-  }
-  
+
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -31,10 +24,7 @@
     text-transform: capitalize;
   }
   
-  .wrapper {
-    background-color: var(--secondary-color);
-    padding: 50px 30px;
-  }
+
   
   .wrapper h2 {
     text-align: center;
@@ -43,7 +33,7 @@
     font-weight: bold;
     color: var(--primary-color);
   }
-  
+
   .feature {
     display: flex;
     justify-content: center;
@@ -51,12 +41,12 @@
     margin-bottom: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
+
   .feature:hover {
     transform: scale(1.05);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
-  
+
   .feature .icon {
     width: 120px;
     height: 120px;
@@ -68,13 +58,13 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
   }
-  
+
   .feature img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
   }
-  
+
   .feature h3 {
     text-align: center;
     font-size: 1.1rem;
@@ -82,39 +72,36 @@
     font-weight: 600;
     text-transform: capitalize;
   }
-  
+
   @media (max-width: 768px) {
     .wrapper {
       padding: 30px 15px;
     }
-  
+
     .feature h3 {
       font-size: 1rem;
     }
   }
-  
+
   @media (max-width: 576px) {
     .wrapper h2 {
       font-size: 1.5rem;
     }
-  
+
     .feature .icon {
       width: 100px;
       height: 100px;
     }
-  
+
     .feature h3 {
       font-size: 0.9rem;
     }
   }
-  
-  
-  
+
   .section-bg {
     background-color: var(--secondary-color);
   }
-  
+
   .section-title {
     font-size: 1.5rem
   }
-  

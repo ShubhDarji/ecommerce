@@ -1,97 +1,110 @@
-:root {
-  --primary-color: #0071C5;  /* Blue */
-  --secondary-color: #F5F5F5; /* Light Gray */
-  --accent-color: #FF3B30;  /* Red */
-  --white: #FFFFFF;
-  --text-color: #222222;
-}
-
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none; /* Remove the default underline from links */
-  color: inherit; /* Inherit color from parent */
-}
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--secondary-color);
-  color: var(--text-color);
+  background-color: #493D9E;
+
 }
 
 /* Wrapper */
 .wrapper {
-  background-color: var(--white);
+  background-color: #493D9E;
   padding: 50px 30px;
-  text-decoration: none;
+}
+
+.wrapper-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
 }
 
 .wrapper h2 {
-  text-align: center;
   margin-bottom: 40px;
   font-size: 2rem;
   font-weight: bold;
-  color: var(--primary-color); /* Blue color for heading */
-  text-decoration: none;
+  color: ;
+  justify-content: center;
+  color: ;
 }
 
-/* Feature Item */
-.feature {
-  display: flex;
+/* Brand Grid */
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none;
 }
 
-.feature:hover {
+/* Brand Item */
+.brand-item {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-item:hover {
   transform: scale(1.05);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.feature .icon {
+/* Brand Link */
+.brand-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Brand Icon */
+.brand-icon {
   width: 120px;
   height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--white); /* White background for icons */
+  background-color: var(--white);
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
 }
 
-.feature img {
+.brand-icon img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
 
-.feature h3 {
-  text-align: center;
-  font-size: 1.1rem;
-  color: var(--text-color);
+/* Brand Name */
+.brand-item h3 {
+  color: #FFF2AF;
+  font-size: 1.5rem;
   font-weight: 600;
   text-transform: capitalize;
 }
 
-/* Mobile Responsiveness */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .wrapper {
     padding: 30px 15px;
   }
 
-  .feature {
-    margin-bottom: 30px;
+  .brand-item h3 {
+    font-size: 1rem;
   }
 
-  .feature h3 {
-    font-size: 1rem;
+  .brand-icon {
+    width: 100px;
+    height: 100px;
   }
 }
 
@@ -100,12 +113,7 @@ body {
     font-size: 1.5rem;
   }
 
-  .feature .icon {
-    width: 100px;
-    height: 100px;
-  }
-
-  .feature h3 {
+  .brand-item h3 {
     font-size: 0.9rem;
   }
 }
