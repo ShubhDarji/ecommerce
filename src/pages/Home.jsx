@@ -13,7 +13,8 @@ const Home = () => {
 const bestSale = products.filter((item) => item.category === "tv");
   useWindowScrollToTop();
   return (
-    <Fragment>
+   <>
+   <Fragment>
       <SliderHome />
       <Wrapper />
       <Section
@@ -29,7 +30,7 @@ const bestSale = products.filter((item) => item.category === "tv");
       <Section title="Best Sales" 
       bgColor="#f6f9fc"
        productItems={salebest} />
-    </Fragment>
+    </Fragment></>
   );
 };
 

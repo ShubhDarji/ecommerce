@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+   /* Ensures all text appears black */
 }
 
 html {
@@ -10,7 +11,7 @@ html {
 
 body {
   background-color: #ffffff;
-  margin: 0;
+  
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,13 +23,11 @@ code {
 }
 
 section {
-  padding-top: 60px !important;
-  padding-bottom: 60px !important;
+
 }
 
 a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
 }
 
 li {
@@ -51,7 +50,6 @@ button {
 .heading h1 {
   width: fit-content;
   text-align: center;
-  color: rgb(0, 0, 0);
   margin: 20px auto 30px !important;
 }
 
@@ -62,16 +60,19 @@ button {
 .homeSlide {
   display: flex;
   justify-content: center;
-  background-color: #f6f9fc;
-  padding-bottom: 0 !important;
+ align-items: center;
+ background-color: #493D9E;
+  
 }
 
-.image-container {
+ .container {
+  width: fit-content;
+  height: fit-content;
   position: relative;
-  width: 100%;
-  height: 200px;
+  
+ 
   overflow: hidden;
-}
+} 
 
 .filter-bar-container .row {
   flex-wrap: wrap-reverse !important;
@@ -134,11 +135,9 @@ button {
   font-size: 15px;
   font-weight: 400;
   margin-top: 50px;
-  color: grey;
 }
 
 .cart-items h4 span {
-  color: #0f3460;
   margin-left: 20px;
   font-weight: 500;
 }
@@ -166,7 +165,6 @@ button {
 .incCart {
   background: none;
   border: 1px solid rgb(3 0 71 / 9%);
-  color: #0f3460;
 }
 
 .desCart {
@@ -180,21 +178,15 @@ button {
   font-weight: 400;
 }
 
-.cart-total h3 {
-  color: #0f3460;
-}
-
 .cart-total h2 {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
   border-bottom: 1px solid rgb(3 0 71 / 9%);
   padding-bottom: 10px;
-  color: #0f3460;
 }
 
 .no-items {
-  color: #0f3460;
   font-size: 18px;
   margin-top: 30px;
   height: 130px;
@@ -208,7 +200,6 @@ button.delete {
   border: none;
   outline: none;
   background-color: transparent;
-  color: black;
 }
 
 button.delete ion-icon {
@@ -227,7 +218,6 @@ button.delete ion-icon {
   margin-left: 3vw;
   padding: 9px 8px;
   background-color: #0e6a23;
-  color: white;
   border: none;
   border-radius: 5px;
   font-size: 1.2rem;
@@ -265,23 +255,6 @@ button.delete ion-icon {
   justify-content: space-between;
 }
 
-.d_flex h4 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-right: 10px;
-  color: #555;
-}
-
-.d_flex h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #333;
-}
-
-.currency-symbol {
-  margin-right: 8px;
-}
-
 .category-buttons {
   display: flex;
   gap: 15px;
@@ -291,8 +264,7 @@ button.delete ion-icon {
 
 .category-buttons button {
   background-color: transparent;
-  color: #0f3460;
-  border: 2px solid #0f3460;
+  border: 2px solid black;
   border-radius: 20px;
   font-size: 1rem;
   padding: 8px 20px;
@@ -303,7 +275,7 @@ button.delete ion-icon {
 }
 
 .category-buttons button:hover {
-  background-color: #0f3460;
+  background-color: black;
   color: white;
 }
 
@@ -313,20 +285,7 @@ button.delete ion-icon {
 }
 
 .category-buttons button.active {
-  background-color: #0f3460;
-  color: white;
-  border-color: #0f3460;
-}
-
-.category-buttons button:first-child {
-  background-color: transparent;
-  color: #0f3460;
-  font-weight: 600;
-  border: 2px solid #0f3460;
-}
-
-.category-buttons button:first-child:hover {
-  background-color: #0f3460;
+  background-color: black;
   color: white;
 }
 
@@ -353,7 +312,6 @@ button.delete ion-icon {
 .login-form h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #333;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -367,7 +325,6 @@ button.delete ion-icon {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 8px;
-  color: #333;
 }
 
 .form-group input {
@@ -382,16 +339,14 @@ button.delete ion-icon {
 }
 
 .form-group input:focus {
-  border-color: #2c1184;
+  border-color: black;
   background-color: #fff;
 }
 
 .login-btn {
   width: 100%;
   padding: 12px;
-  background-color: #0a3281;
-  color: white;
-  border: none;
+  background-color: black;
   border-radius: 8px;
   font-size: 1.1rem;
   font-weight: bold;
@@ -400,20 +355,5 @@ button.delete ion-icon {
 }
 
 .login-btn:hover {
-  background-color: #0a0851;
-}
-
-.signup-link {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 1rem;
-}
-
-.signup-link a {
-  color: #1c2ac8;
-  text-decoration: none;
-}
-
-.signup-link a:hover {
-  text-decoration: underline;
+  background-color: #333;
 }
