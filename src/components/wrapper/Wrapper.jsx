@@ -14,11 +14,17 @@ const Wrapper = () => {
         <div className="brand-grid">
           {brands.map((brand, index) => {
             const brandProduct = products.find((product) => product.companyName === brand);
+            const logoPath = `/brands/${brand.toLowerCase()}.png`;
+
             return (
               <div className="brand-item" key={index}>
                 <Link to={`/brand/${brand.toLowerCase()}`} className="brand-link">
                   <div className="brand-icon">
-                    <img src={`/images/${brand.toLowerCase()}.png`} alt={brand} />
+                    <img 
+                      src={logoPath} 
+                      alt={brand} 
+                      onError={(e) => (e.target.src = "/brands/default-brand.png")} // Fallback image
+                    />
                   </div>
                   <h3>{brand}</h3>
                 </Link>
