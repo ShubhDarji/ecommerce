@@ -4,12 +4,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--secondary-color);
+    background-color:#493D9E;
   }
-  
+  .section-title {
+    color: #FFF2AF;
+    font-size: 1.5rem
+  }
   section {
-    padding: 50px 0;
-    height: fit-content;
+
   }
   
   .heading {
@@ -98,10 +100,10 @@
     }
   }
 
-  .section-bg {
-    background-color: var(--secondary-color);
-  }
+ 
 
-  .section-title {
-    font-size: 1.5rem
+  hr{
+    margin :0rem 5vw;
+    height: 3px;
+    background-color: white;
   }

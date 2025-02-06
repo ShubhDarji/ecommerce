@@ -17,18 +17,20 @@ const bestSale = products.filter((item) => item.category === "tv");
    <Fragment>
       <SliderHome />
       <Wrapper />
+      <hr></hr>
       <Section
         title="Big Discount"
-        bgColor="#f6f9fc"
+      
         productItems={discoutProducts}
-      />
+      /> <hr></hr>
       <Section
         title="New Arrivals"
-        bgColor="white"
+        
         productItems={newArrivalData}
       />
+       <hr></hr>
       <Section title="Best Sales" 
-      bgColor="#f6f9fc"
+      bgColor=""
        productItems={salebest} />
     </Fragment></>
   );

@@ -1,4 +1,5 @@
 * {
+  
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -10,9 +11,9 @@ html {
 }
 
 body {
-  background-color: #493D9E;
   
-  font-family: "Lato", sans-serif;
+  font-family: 'Poppins', sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden !important;
@@ -87,7 +88,7 @@ button {
 }
 
 .cart-items {
-  background: #f6f9fc;
+  background:#493D9E;
 }
 
 .cart-items .cart-total {

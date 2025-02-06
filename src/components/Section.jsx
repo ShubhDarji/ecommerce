@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard/ProductCard";
 import './Section.css'
 const Section = ({ title, bgColor, productItems }) => {
   return (
-    <section style={{ background: bgColor }}>
+    <section>
       <Container>
         <div className="heading">
           <h1>{title}</h1>
