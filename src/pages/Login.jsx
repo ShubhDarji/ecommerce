@@ -1,30 +1,33 @@
-import { useState } from "react";
-import axios from "axios";
-
+import React, { useState } from 'react';
+import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
+import "./signup.css"
 const Login = () => {
-  const [user, setUser] = useState({ email: "", password: "" });
-
-  const handleChange = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();  // Initialize navigation
+  const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", user);
-      localStorage.setItem("token", res.data.token);
+      const { data } = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      localStorage.setItem('token', data.token);
       alert("Login successful!");
-    } catch (err) {
-      alert("Invalid credentials");
+      navigate('/');  // Redirect to homepage
+    } catch (error) {
+      alert(error.response?.data?.message || "Login failed");
     }
   };
-
+  
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
-      <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
-      <button type="submit">Login</button>
-    </form>
+    <div>
+      <h2>Login</h2>
+      <form onSubmit={handleLogin}>
+        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <Link to="/signup">Signup</Link></p>
+    </div>
   );
 };
 

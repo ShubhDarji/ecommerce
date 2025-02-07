@@ -17,23 +17,24 @@ const Product = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-
+  
     const currentProduct = products.find(
       (item) => String(item.id) === String(id) // Ensure ID comparison works
     );
-
+  
     if (currentProduct) {
       setSelectedProduct(currentProduct);
       setRelatedProducts(
         products.filter(
           (item) =>
-            <item className="companyname"></item> === currentProduct.companyName && item.id !== currentProduct.id
+            item.companyName === currentProduct.companyName && item.id !== currentProduct.id
         )
       );
     } else {
       setSelectedProduct(null);
     }
   }, [id]);
+  
 
   useWindowScrollToTop();
 

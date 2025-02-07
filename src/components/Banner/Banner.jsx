@@ -4,7 +4,7 @@ import "./banner.css";
 const Banner = ({title}) => {
     return ( 
         <div className="image-container">
-            
+       {/*      
             <div className="overlay">
                 <Container>
                     <Row>
@@ -13,7 +13,7 @@ const Banner = ({title}) => {
                         </Col>
                     </Row>
                 </Container>
-            </div>
+            </div> */}
         </div>
     );
 }

@@ -23,8 +23,8 @@ const Navbar = () => {
         <li><a href="/">Festival Offer</a></li>
         <li><a href="/shop">Products</a></li>
         <li><a href="/shop">About</a></li>
-        <li><a href="#">Forum</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="/signup">signup</a></li>
+        <li><a href="/login">Login</a></li>
         <li><a href='/cart'>cart</a></li>
       </ul>
 
@@ -34,8 +34,8 @@ const Navbar = () => {
         <li className="hideOnMobile"><a href="/">festiveal offer</a></li>
         <li className="hideOnMobile"><a href='/shop'>Products</a></li>
         <li className="hideOnMobile"><a href="/about">About</a></li>
-        <li className="hideOnMobile"><a href="#">Forum</a></li>
-        <li className="hideOnMobile"><a href="#">Login</a></li>
+        <li className="hideOnMobile"><a href="/signup">signup</a></li>
+        <li className="hideOnMobile"><a href="/login">Login</a></li>
         <li className="hideOnMobile"><a href="/cart">cart</a></li>
         <li className="menu-button" onClick={showSidebar}>
        

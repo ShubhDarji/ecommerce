@@ -1,20 +1,19 @@
-.product-page{
+/* Base styles */
+.product-page {
   color: black;
-}
-h2{
-  color: black;
-}
-.product-page img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  color: rgb(0, 0, 0);
 }
 
-@media (max-width: 767px) {
-  .product-page .row {
-    gap: 30px;
-  }
+h2 {
+  color: black;
+}
+
+.product-page img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  object-fit: contain;
+  color: rgb(0, 0, 0);
 }
 
 .product-page .rate {
@@ -29,7 +28,6 @@ h2{
   font-size: 12px;
   color: #ffcd4e;
   margin: 5px 5px 5px 0;
- 
 }
 
 .product-page .info {
@@ -68,4 +66,105 @@ h2{
   color: white;
   font-size: 17px;
   border-radius: 7px;
+}
+
+/* Media Queries */
+
+/* For Tablets and below (max-width 768px) */
+@media (max-width: 768px) {
+  .product-page .row {
+    gap: 20px;
+  }
+
+  .product-page img {
+    height: 300px;
+    max-width: 100%;
+  }
+
+  .product-page .rate {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .product-page .info {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .product-page .info .price {
+    font-size: 22px;
+  }
+
+  .product-page p {
+    font-size: 16px;
+  }
+
+  .product-page .qty-input {
+    width: 60px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .product-page button.add {
+    font-size: 15px;
+    padding: 8px 12px;
+  }
+}
+
+/* For Large Mobile Screens (max-width 480px) */
+@media (max-width: 480px) {
+  .product-page img {
+    height: 250px;
+  }
+
+  .product-page .rate {
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .product-page .info {
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .product-page .info .price {
+    font-size: 20px;
+  }
+
+  .product-page p {
+    font-size: 14px;
+  }
+
+  .product-page .qty-input {
+    width: 50px;
+    height: 25px;
+    font-size: 12px;
+  }
+
+  .product-page button.add {
+    font-size: 14px;
+    padding: 7px 10px;
+  }
+}
+
+/* For Large Screens (Laptop and up) */
+@media (min-width: 1024px) {
+  .product-page .rate {
+    gap: 50px;
+  }
+
+  .product-page .info {
+    gap: 50px;
+  }
+
+  .product-page .qty-input {
+    width: 100px;
+  }
+
+  .product-page button.add {
+    font-size: 18px;
+    padding: 12px 18px;
+  }
 }
