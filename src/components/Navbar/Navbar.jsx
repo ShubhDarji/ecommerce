@@ -1,39 +1,57 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./navbar.css"; // Ensure your styles are updated
+import "./navbar.css"; 
 import CloseIcon from "../../Images/svgs/close_FILL0_wght400_GRAD0_opsz48.svg";
 import MenuIcon from "../../Images/svgs/menu_FILL0_wght400_GRAD0_opsz48.svg";
-import CartIcon from "../../Images/svgs/shopping-cart-01-svgrepo-com.svg"; // Add a cart icon
+import CartIcon from "../../Images/svgs/shopping-cart-01-svgrepo-com.svg"; 
 
 const Navbar = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
 
-  // Fetch cart items (assuming stored in localStorage)
-  useEffect(() => {
+  // Function to update cart count dynamically
+  const updateCartCount = () => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCartItems(storedCart);
+    setCartCount(storedCart.length);
+  };
+
+  // Fetch cart count on mount and listen for changes
+  useEffect(() => {
+    updateCartCount(); 
+
+    // Listen for storage changes (when items are added/removed)
+    const handleStorageChange = () => updateCartCount();
+    window.addEventListener("storage", handleStorageChange);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
   }, []);
 
-  const showSidebar = () => setIsSidebarVisible(true);
-  const hideSidebar = () => setIsSidebarVisible(false);
+  // Listen for cart updates from other components (like the cart page)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      updateCartCount(); // Poll every second for changes
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <nav>
       {/* Sidebar */}
       <ul className={`sidebar ${isSidebarVisible ? "visible" : ""}`}>
-        <li onClick={hideSidebar}>
+        <li onClick={() => setIsSidebarVisible(false)}>
           <img src={CloseIcon} alt="Close menu" width={26} height={26} />
         </li>
-        <li><Link to="/">Festival Offer</Link></li>
-        <li><Link to="/shop">Products</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/signup">Signup</Link></li>
-        <li><Link to="/login">Login</Link></li>
-        <li>
+        <li onClick={() => setIsSidebarVisible(false)}><Link to="/">Festival Offer</Link></li>
+        <li onClick={() => setIsSidebarVisible(false)}><Link to="/shop">Products</Link></li>
+        <li onClick={() => setIsSidebarVisible(false)}><Link to="/about">About</Link></li>
+        <li onClick={() => setIsSidebarVisible(false)}><Link to="/signup">Signup</Link></li>
+        <li onClick={() => setIsSidebarVisible(false)}><Link to="/login">Login</Link></li>
+        <li onClick={() => setIsSidebarVisible(false)}>
           <Link to="/cart">
             <img src={CartIcon} alt="Cart" width={26} height={26} />
-            {cartItems.length > 0 && <span className="cart-count">{cartItems.length}</span>}
+            {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
           </Link>
         </li>
       </ul>
@@ -47,16 +65,16 @@ const Navbar = () => {
         <li className="hideOnMobile"><Link to="/signup">Signup</Link></li>
         <li className="hideOnMobile"><Link to="/login">Login</Link></li>
         
-        {/* Cart Icon with Item Count */}
+        {/* Cart Icon with Dynamic Count */}
         <li className="hideOnMobile">
           <Link to="/cart" className="cart-icon">
             <img src={CartIcon} alt="Cart" width={26} height={26} />
-            {cartItems.length > 0 && <span className="cart-count">{cartItems.length}</span>}
+            {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
           </Link>
         </li>
 
-        {/* Menu Button for Mobile */}
-        <li className="menu-button" onClick={showSidebar}>
+        {/* Mobile Menu Button */}
+        <li className="menu-button" onClick={() => setIsSidebarVisible(true)}>
           <img src={MenuIcon} alt="Open menu" width={26} height={26} />
         </li>
       </ul>

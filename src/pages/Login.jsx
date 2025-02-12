@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
-import './signup.css';
-
-
-
+import { useNavigate } from "react-router-dom";
+import './signup.css'
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,11 +9,12 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+
     try {
       const response = await axios.post("http://localhost:5000/api/auth/login", { email, password });
-      alert("Login successful!");
       localStorage.setItem("token", response.data.token);
-      navigate("/"); // Redirect to homepage
+      alert("Login successful!");
+      navigate("/");
     } catch (error) {
       alert(error.response?.data?.message || "Login failed!");
     }
@@ -30,7 +28,6 @@ const Login = () => {
         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
         <button type="submit">Login</button>
       </form>
-      <p>Don't have an account? <Link to="/signup">Signup</Link></p>
     </div>
   );
 };

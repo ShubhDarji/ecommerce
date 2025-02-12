@@ -132,7 +132,7 @@ nav li:first-child {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 310px) {
   .sidebar {
     width: 100%;
   }
