@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { products } from "../../utils/products";
+import "./searchbar.css"
 
 const SearchBar = ({ setFilterList }) => {
   const [searchWord, setSearchWord] = useState("");

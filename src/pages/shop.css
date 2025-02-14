@@ -1,3 +1,38 @@
 body{
     background-color: #ffffff;
 }
+/* Main container */
+.container-fluid {
+    padding: 20px;
+  }
+  
+  /* Sidebar */
+  .filter-sidebar {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  /* Filter section */
+  .filter-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* Product section */
+  .product-section {
+    padding: 20px;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .filter-sidebar {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .product-section {
+      width: 100%;
+    }
+  }
+  

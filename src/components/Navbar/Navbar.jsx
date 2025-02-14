@@ -58,12 +58,12 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <ul>
-        <li><Link to="/">Logo here</Link></li>
-        <li className="hideOnMobile"><Link to="/">Festival Offer</Link></li>
-        <li className="hideOnMobile"><Link to="/shop">Products</Link></li>
-        <li className="hideOnMobile"><Link to="/about">About</Link></li>
-        <li className="hideOnMobile"><Link to="/signup">Signup</Link></li>
-        <li className="hideOnMobile"><Link to="/login">Login</Link></li>
+        <li><Link to="/"><img className="img-nav" src="5498962-01.png"></img></Link></li>
+        <li className="hideOnMobile"><Link  to="/">Festival Offer</Link></li>
+        <li className="hideOnMobile"><Link     to="/shop">Products</Link></li>
+        <li className="hideOnMobile"><Link   to="/about">About</Link></li>
+        <li className="hideOnMobile"><Link  to="/signup">Signup</Link></li>
+        <li className="hideOnMobile"><Link  to="/login">Login</Link></li>
         
         {/* Cart Icon with Dynamic Count */}
         <li className="hideOnMobile">

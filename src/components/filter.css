@@ -1,0 +1,80 @@
+/* Filter Sidebar */
+.filter-section {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  /* Filter Title */
+  .filter-section h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  /* Select Dropdown Styling */
+  .css-2b097c-container {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* Checkbox Filters */
+  .filter-section label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    margin-bottom: 8px;
+  }
+  
+  .filter-section input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  
+  /* Price Range */
+  .price-range-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+    accent-color: #0071c5; /* Matches theme */
+  }
+  
+  .price-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #444;
+    margin-top: 5px;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .filter-section {
+      padding: 15px;
+      width: 100%;
+    }
+  
+    .filter-section h4 {
+      font-size: 14px;
+    }
+  
+    .filter-section label {
+      font-size: 12px;
+    }
+  
+    .price-values {
+      font-size: 12px;
+    }
+  }
+  

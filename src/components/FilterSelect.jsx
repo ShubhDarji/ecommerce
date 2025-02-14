@@ -1,57 +1,69 @@
 import Select from "react-select";
 import { useState, useEffect } from "react";
 import { products } from "../utils/products";
+import "./filter.css";
 
 const FilterSelect = ({ setFilterList }) => {
   const [categories, setCategories] = useState([]);
   const [brands, setBrands] = useState([]);
   const [priceRange, setPriceRange] = useState([0, 100000]);
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedBrands, setSelectedBrands] = useState([]);
+  const [selectedPrice, setSelectedPrice] = useState([0, 100000]);
 
   useEffect(() => {
-    const uniqueCategories = [...new Set(products.map((p) => p.category))].map((cat) => ({
-      value: cat,
-      label: cat
-    }));
+    // Get Unique Categories & Brands
+    setCategories(
+      [...new Set(products.map((p) => p.category))].map((cat) => ({
+        value: cat,
+        label: cat,
+      }))
+    );
 
-    const uniqueBrands = [...new Set(products.map((p) => p.companyName))].map((brand) => ({
-      value: brand,
-      label: brand
-    }));
+    setBrands(
+      [...new Set(products.map((p) => p.companyName))].map((brand) => ({
+        value: brand,
+        label: brand,
+      }))
+    );
 
+    // Get Price Range
     const prices = products.map((p) => p.price);
-    const minPrice = Math.min(...prices);
-    const maxPrice = Math.max(...prices);
-
-    setCategories(uniqueCategories);
-    setBrands(uniqueBrands);
-    setPriceRange([minPrice, maxPrice]);
+    setPriceRange([Math.min(...prices), Math.max(...prices)]);
+    setSelectedPrice([Math.min(...prices), Math.max(...prices)]);
   }, []);
 
-  const handleFilterChange = (filterType, selectedOptions) => {
+  // Function to apply all filters
+  useEffect(() => {
     let filtered = products;
 
-    if (filterType === "category" && selectedOptions.length) {
-      filtered = filtered.filter((p) => selectedOptions.some((opt) => opt.value === p.category));
+    if (selectedCategories.length) {
+      filtered = filtered.filter((p) =>
+        selectedCategories.some((opt) => opt.value === p.category)
+      );
     }
 
-    if (filterType === "brand" && selectedOptions.length) {
-      filtered = filtered.filter((p) => selectedOptions.some((opt) => opt.value === p.companyName));
+    if (selectedBrands.length) {
+      filtered = filtered.filter((p) =>
+        selectedBrands.some((opt) => opt.value === p.companyName)
+      );
     }
 
-    if (filterType === "price") {
-      filtered = filtered.filter((p) => p.price >= selectedOptions[0] && p.price <= selectedOptions[1]);
-    }
+    filtered = filtered.filter(
+      (p) => p.price >= selectedPrice[0] && p.price <= selectedPrice[1]
+    );
 
     setFilterList(filtered);
-  };
+  }, [selectedCategories, selectedBrands, selectedPrice, setFilterList]);
 
   return (
-    <div>
+    <div className="filter-container">
       <h4>Category</h4>
       <Select
         options={categories}
         placeholder="Select Category"
-        onChange={(selectedOptions) => handleFilterChange("category", selectedOptions)}
+        value={selectedCategories}
+        onChange={setSelectedCategories}
         isMulti
         isClearable
       />
@@ -60,7 +72,8 @@ const FilterSelect = ({ setFilterList }) => {
       <Select
         options={brands}
         placeholder="Select Brand"
-        onChange={(selectedOptions) => handleFilterChange("brand", selectedOptions)}
+        value={selectedBrands}
+        onChange={setSelectedBrands}
         isMulti
         isClearable
       />
@@ -70,9 +83,12 @@ const FilterSelect = ({ setFilterList }) => {
         type="range"
         min={priceRange[0]}
         max={priceRange[1]}
-        onChange={(e) => handleFilterChange("price", [priceRange[0], parseInt(e.target.value, 10)])}
+        value={selectedPrice[1]}
+        onChange={(e) =>
+          setSelectedPrice([priceRange[0], parseInt(e.target.value, 10)])
+        }
       />
-      <span>₹{priceRange[0]} - ₹{priceRange[1]}</span>
+      <span>₹{selectedPrice[0]} - ₹{selectedPrice[1]}</span>
     </div>
   );
 };

@@ -31,41 +31,27 @@ const maxPrice = Math.max(...prices);
   }; 
 
   return (
-    <Fragment><div className="main_cont">
-      <FilterSelect setFilterList={setFilterList} products={products} />
-<SearchBar setFilterList={setFilterList} products={products }  />
+    <Fragment>
+    <Container fluid>
+      <Row>
+        {/* Sidebar Filters (Left) */}
+        <Col md={3} className="filter-sidebar">
+          <div className="filter-section">
+            <h3>Filters</h3>
+            <SearchBar setFilterList={setFilterList} products={products} />
+            <FilterSelect setFilterList={setFilterList} products={products} />
+          </div>
+        </Col>
 
-
-      
-      <section className="filter-bar py-4">
-        <Container>
-          <Row className="justify-content-center">
-            <Col md={12} className="text-center mb-4">
-              {/* Category Filter Buttons */}
-             {/*  <div className="category-buttons">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    className={`category-button ${activeCategory === category ? "active" : ""}`}
-                    onClick={() => filterByCategory(category)}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div> */}
-            </Col>
-          </Row>
-          <Row>
-            {/* Product List */}
-            <Col>
-              <ShopList productItems={filterList} />
-            </Col>
-          </Row>
-        </Container>
-        
-      </section></div>
-    </Fragment>
-  );
+        {/* Product Listing (Right) */}
+        <Col md={9} className="product-section">
+          <h2>All Products</h2>
+          <ShopList productItems={filterList} />
+        </Col>
+      </Row>
+    </Container>
+  </Fragment>
+);
 };
 
 export default Shop;

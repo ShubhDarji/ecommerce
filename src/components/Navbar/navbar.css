@@ -33,10 +33,10 @@ nav ul {
 }
 
 nav li {
-  height: 50px;
+  height: 70px;
 }
 
-nav a {
+nav a  {
   margin:0rem .5rem;
   height: 100%;
   padding: 10px 10px;
@@ -136,4 +136,10 @@ nav li:first-child {
   .sidebar {
     width: 100%;
   }
+}
+
+.img-nav{
+  width:auto;
+  max-height: 90px;
+  
 }
