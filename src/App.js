@@ -14,7 +14,7 @@ const Shop = lazy(() => import("./pages/Shop"));
 const Cart = lazy(() => import("./pages/Cart"));
 const Product = lazy(() => import("./pages/Product"));
 
-// Custom wrapper to show Loader on route changes
+// Custom wrapper to show Loader on route changes/* 
 const RouteWrapper = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const location = useLocation();
@@ -30,25 +30,23 @@ const RouteWrapper = ({ children }) => {
 
 function App() {
   return (
-    <Router>
-      <ToastContainer position="top-right" autoClose={1000} />
-      <NavBar />
-      <Suspense fallback={<Loader />}>
-        <RouteWrapper>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/shop/:id" element={<Product />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/brand/:brandName" element={<Brand />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-          </Routes>
-        </RouteWrapper>
-      </Suspense>
-      <Footer />
-    </Router>
+    <Suspense fallback={<Loader />}> 
+      <Router>
+        <ToastContainer position="top-right" autoClose={1000} hideProgressBar />
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/:id" element={<Product />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/brand/:brandName" element={<Brand />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+        <Footer/>
+      </Router>
+    </Suspense> 
   );
 }
 

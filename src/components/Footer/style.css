@@ -1,8 +1,22 @@
 footer {
-  background-color:#FFF2AF ;
+
+
   padding: 60px 0;
   color: black;
-}
+ background: linear-gradient(155deg, #ff4e50, #fc913a, #f9d423, #e1f5c4, #a8e6cf);
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite;
+  color: rgb(0, 0, 0); /* Ensures text remains readable */
+  padding: 100px 0;
+  text-align: center;
+ }
+ 
+ @keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+ }
+
 
 footer .container {
   display: flex;

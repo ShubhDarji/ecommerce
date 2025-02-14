@@ -1,28 +1,27 @@
-import React from 'react';
-import { Col, Container, Row } from "react-bootstrap";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css"; 
+import { Button } from '../ui/Button';
 
-import './slidercard.css' // Import CSS for styling
+import React from 'react'
 
-const SlideCard = ({ title, desc, cover, buttonText = "Learn More" }) => {
+
+
+
+export function SlideCard() {
   return (
-    <div className="slide-card">
-      <div className="slide-card-content" style={{ backgroundImage: `url(${cover})`, width:'(0%) ' }}>
-        <div className='other'>
-        <Container>
-          <Row>
-            <Col md={{ span: 8, offset: 2 }} className="text-center">
-              <h3 className="slide-card-title">{title}</h3>
-              <p className="slide-card-desc">{desc}</p>
-              <button className="slide-card-button">{buttonText}</button>
-            </Col>
-          </Row>
-        </Container></div>
+    <section className="relative">
+      <div className="container flex flex-col items-center justify-center space-y-4 py-32 text-center md:py-36 lg:py-40">
+        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
+          Smart Laundry Solutions
+        </h1>
+        <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+          Simplify your life with our innovative home appliances. Experience the future of laundry today.
+        </p>
+        <Button className="mt-6" size="lg">
+          Shop Now
+        </Button>
       </div>
-    </div>
-  );
+    </section>
+  )
 }
+
 
 export default SlideCard;

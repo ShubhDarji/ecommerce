@@ -1,7 +1,7 @@
 /* Section Styles */
 section {
     padding: 60px 0;
-    background-color: #493D9E;/* Light Gray background */
+    background-color: #F8F9FA;/* Light Gray background */
   }
   
   section .heading {
@@ -10,7 +10,7 @@ section {
   }
   
   section .heading h1 {
-    color: #FFF2AF; /* Blue color */
+    color: #000000; /* Blue color */
     font-size: 2.5rem;
     font-weight: bold;
     text-transform: uppercase;

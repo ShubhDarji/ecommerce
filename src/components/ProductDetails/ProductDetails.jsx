@@ -42,6 +42,7 @@ const ProductDetails = ({ selectedProduct }) => {
               <span>category:{selectedProduct?.category}</span>
             </div>
             <p>{selectedProduct?.shortDesc}</p>
+            <div className="addtocart">
             <input
               className="qty-input"
               type="number"
@@ -56,7 +57,7 @@ const ProductDetails = ({ selectedProduct }) => {
               onClick={() => handelAdd(selectedProduct, quantity)}
             >
               Add To Cart
-            </button>
+            </button></div>
           </Col>
         </Row>
       </Container>

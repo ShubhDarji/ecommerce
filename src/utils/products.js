@@ -1,11 +1,11 @@
-import refrigeratorImage01 from "../Images/Adobe Express - file (1).png";
+import refrigeratorImage01 from "../Images/lg01.png";
 import refrigeratorImage02 from "../Images/Adobe Express - file (3).png";
 import refrigeratorImage03 from "../Images/31jiBNco+0L._SY445_SX342_.png";
 
-import acImage01 from "../Images/Adobe Express - file.png";
-import acImage02 from "../Images/OIP (3).png";
-import acImage03 from "../Images/31+y4WrV9wL._SX342_SY445_.jpg";
-import acImage04 from "../Images/51FQa0hdP0L._SX466_.jpg";
+import acImage01 from "../Images/ac01.png";
+import acImage02 from "../Images/ac02.png";
+import acImage03 from "../Images/ac03.png";
+import acImage04 from "../Images/ac04.png";
 
 import  washingMachineImage01 from "../Images/31+y4WrV9wL._SX342_SY445_.jpg";
 import  washingMachineImage02 from "../Images/51FQa0hdP0L._SX466_.jpg";
@@ -13,7 +13,7 @@ import  washingMachineImage03 from "../Images/61+a0T7rpFL._AC_UY218_.jpg";
 import  washingMachineImage04 from "../Images/71eL4y-4BOL._AC_UY218_.jpg";
 import  washingMachineImage05 from "../Images/712G-LLV+NL._AC_UY218_.jpg";
 
-import coolerImage01 from "../Images/phone-01.jpg";
+import coolerImage01 from "../Images/ac05.png";
 import coolerImage02 from "../Images/51xSeqHG8NL._AC_UY218_.jpg";
 import coolerImage03 from "../Images/71PB4DerlcL._AC_UY218_.jpg";
 import coolerImage04 from "../Images/61uGikFOzHL._AC_UY218_.jpg";
@@ -31,7 +31,7 @@ import microwaveImage01 from "../Images/61tCpuACSIL._AC_UY218_.jpg";
 import wireless03 from "../Images/wireless-03.png";
 import wireless04 from "../Images/wireless-04.png"; */
 
-import refrigeratorImage from "../Images/Inverter-Split-ACs-LP-900x563_1000x.webp";
+import refrigeratorImage from "../Images/ac04.png";
 import airConditionerImage from "../Images/TMF_PF_1440x344.jpg";
 import washingMachineImage from "../Images/1440x344_WT85B4200GD_TL.png";// need to replace
 

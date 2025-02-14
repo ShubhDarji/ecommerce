@@ -1,22 +1,21 @@
 import { useState } from "react";
-import "./searchbar.css";
 import { products } from "../../utils/products";
-// import useDebounce from "../../hooks/useDebounce";
+
 const SearchBar = ({ setFilterList }) => {
-  const [searchWord, setSearchWord] = useState(null);
-  // const debounceSearchWord = useDebounce(searchWord, 300);
-  const handelChange = (input) => {
-    setSearchWord(input.target.value);
-    setFilterList(
-      products.filter((item) =>
-        item.productName?.toLowerCase().includes(searchWord?.toLowerCase())
-      )
+  const [searchWord, setSearchWord] = useState("");
+
+  const handleChange = (e) => {
+    const keyword = e.target.value;
+    setSearchWord(keyword);
+    const filtered = products.filter((item) =>
+      item.productName.toLowerCase().includes(keyword.toLowerCase())
     );
+    setFilterList(filtered);
   };
+
   return (
     <div className="search-container">
-      <input type="text" placeholder="Search..." onChange={handelChange} />
-      <ion-icon name="search-outline" className="search-icon"></ion-icon>
+      <input type="text" placeholder="Search..." value={searchWord} onChange={handleChange} />
     </div>
   );
 };

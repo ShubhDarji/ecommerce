@@ -1,6 +1,6 @@
 import { useState, Fragment } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { products } from "../utils/products"; // Assuming this is the products array
+import {products} from "../utils/products"; // Assuming this is the products array
 import ShopList from "../components/ShopList"; // Component to list products
 import Banner from "../components/Banner/Banner"; // Banner component
 import useWindowScrollToTop from "../hooks/useWindowScrollToTop"; // Custom hook
@@ -13,10 +13,13 @@ const Shop = () => {
   const [activeCategory, setActiveCategory] = useState("All"); // Active category state
 
   // Get unique categories for filter buttons
-  const categories = ["All", ...new Set(products.map((product) => product.category))];
-
+const categories = [...new Set(products.map((p) => p.category))];
+  const brands = [...new Set(products.map((p) => p.brand))];
   useWindowScrollToTop(); // Ensure the page scrolls to the top on load
 
+  const prices = products.map((p) => p.price);
+const minPrice = Math.min(...prices);
+const maxPrice = Math.max(...prices);
   // Function to filter products by category/* 
   const filterByCategory = (category) => {
     setActiveCategory(category);
@@ -29,10 +32,10 @@ const Shop = () => {
 
   return (
     <Fragment><div className="main_cont">
-      <div className="search_container">
+      <FilterSelect setFilterList={setFilterList} products={products} />
 <SearchBar setFilterList={setFilterList} products={products }  />
-<FilterSelect setFilterList={setFilterList} products={products} />
-</div>
+
+
       
       <section className="filter-bar py-4">
         <Container>

@@ -1,20 +1,30 @@
 import { Col } from "react-bootstrap";
 import "./product-card.css";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../app/features/cart/cartSlice";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductCard = ({ title, productItem }) => {
   const dispatch = useDispatch();
   const router = useNavigate();
-  const handelClick = () => {
-    router(`/shop/${productItem.id}`);
-  };
-  const handelAdd = (productItem) => {
+  const handleClick = () => router(`/shop/${productItem.id}`);
+
+  const handleAdd = (productItem) => {
     dispatch(addToCart({ product: productItem, num: 1 }));
-    toast.success("Product has been added to cart!");
+    toast.success("Product has been added to cart!", {
+      position: "top-right",  // ✅ Fixed position
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progressStyle: { background: "green" }, // ✅ Green progress bar
+      className: "custom-toast", // ✅ Custom shape styling
+    });
   };
+
   return (
     <Col md={3} sm={5} xs={10} className="product mtop">
       {title === "Big Discount" ? (
@@ -22,7 +32,7 @@ const ProductCard = ({ title, productItem }) => {
       ) : null}
       <img
         loading="lazy"
-        onClick={() => handelClick()}
+        onClick={() => handleClick()}
         src={productItem.imgUrl}
         alt=""
       />
@@ -30,7 +40,7 @@ const ProductCard = ({ title, productItem }) => {
         <ion-icon name="heart-outline"></ion-icon>
       </div>
       <div className="product-details">
-        <h3 onClick={() => handelClick()}>{productItem.productName}</h3>
+        <h3 onClick={() => handleClick()}>{productItem.productName}</h3>
         <div className="rate">
           <i className="fa fa-star"></i>
           <i className="fa fa-star"></i>
@@ -44,7 +54,7 @@ const ProductCard = ({ title, productItem }) => {
             aria-label="Add"
             type="submit"
             className="add"
-            onClick={() => handelAdd(productItem)}
+            onClick={() => handleAdd(productItem)}
           >
             add to cart
           </button>

@@ -11,7 +11,7 @@
 
 /* Navbar Styles */
 nav {
-  background-color: #B2A5FF; /* Dark Blue */
+  background-color: #ffffff; /* Dark Blue */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
   width: 100%;
@@ -46,13 +46,13 @@ nav a {
   color: rgb(0, 0, 0); /* White Text for Contrast */
   font-weight: 500;
   transition: all 0.3s ease-in-out;
-  border-radius: 5px;
+  border-radius: .8rem;
 }
 
 nav a:hover {
   transition: .5 ease-in;
-background-color: #FFF2AF;
-  color: rgb(0, 0, 0);
+background-color: #000000;
+  color: rgb(255, 255, 255);
 }
 
 /* Move Logo to the Left */
@@ -71,7 +71,7 @@ nav li:first-child {
   height: 100vh;
   width: 250px;
    /* Dark Blue with Transparency */
-   background-color: #b2a5ff46;
+   background-color: #ffffff46;
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 15px rgba(0, 0, 0, 0.1);
   list-style: none;
@@ -105,10 +105,10 @@ nav li:first-child {
 
 .sidebar a:hover {
   transition: border .7 ease-in;
-  color: white;
+  color: rgb(255, 255, 255);
 
   border-radius: 6rem;
-  background:#493D9E
+  background:#070707
 }
 
 /* Menu Button */
@@ -123,7 +123,7 @@ nav li:first-child {
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
+@media (max-width: 710px) {
   .hideOnMobile {
     display: none;
   }
@@ -132,29 +132,8 @@ nav li:first-child {
   }
 }
 
-@media (max-width: 310px) {
+@media (max-width:310px) {
   .sidebar {
     width: 100%;
   }
-}
-/* Cart Icon and Count */
-.cart-icon {
-  position: relative;
-  display: inline-block;
-}
-
-.cart-count {
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  background-color: red;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
